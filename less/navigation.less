@@ -1,1 +1,34 @@
 // Navigation Styles here
+
+nav {
+    border-bottom:@navigation-border;
+    height:65px;
+    .centerContent();
+    div {
+        display:flex;
+        justify-content:space-between;
+        .contentWidth();
+        .links {
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            width:100%;
+            div {
+                width:25%; 
+                font-size:150%;
+                text-align:center;
+                .centerContent();
+            }
+        }
+    }
+}
+
+.header-parent {
+    .contentWidth();
+    .centerContent();
+    flex-direction:column;
+    border-bottom:@navigation-border;
+    .header-content {
+        margin-top:15px;
+    }
+}
