@@ -2,15 +2,29 @@
 
 nav {
     border-bottom:@navigation-border;
-    height:65px;
+    // height:65px;
+    margin-top:20px;
     .centerContent();
+    @media @iPhone {
+        padding-bottom:7px;
+    }
     div {
         display:flex;
         justify-content:space-between;
         .contentWidth();
+        @media @iPhone {
+            flex-direction:column;
+        }
+        .website-heading {
+            @media @iPhone {
+                width:100%;
+                text-align:center;
+            }
+        }
         .links {
             display:flex;
             justify-content:space-around;
+            flex-direction:row;
             align-items:center;
             width:100%;
             div {
@@ -19,16 +33,9 @@ nav {
                 text-align:center;
                 .centerContent();
             }
+            @media @iPhone {
+                margin-top:10px;
+            }
         }
-    }
-}
-
-.header-parent {
-    .contentWidth();
-    .centerContent();
-    flex-direction:column;
-    border-bottom:@navigation-border;
-    .header-content {
-        margin-top:15px;
     }
 }

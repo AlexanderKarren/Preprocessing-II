@@ -1,3 +1,16 @@
+.header-parent {
+  .contentWidth();
+  .centerContent();
+  flex-direction:column;
+  border-bottom:@navigation-border;
+  .header-content {
+      margin-top:15px;
+  }
+  @media @iPhone {
+    .contentWidthPhone();
+  }
+}
+
 .home {
 
   .content-section {
@@ -6,16 +19,24 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @iPhone {
+      flex-direction:column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @iPhone {
+        width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @iPhone {
+        width:100%;
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +47,9 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: @navigation-border;
+    @media @iPhone {
+      flex-direction:column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -41,6 +65,9 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @iPhone {
+      width:100%;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +79,32 @@
     border-top: @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @iPhone {
+      flex-direction:column;
+      .centerContent();
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @iPhone {
+        width:80%;
+      }
+      .btn {
+        .centerContent();
+        button {
+          background-color:teal;
+          border-radius:12px;
+          width:100%;
+          height:40px;
+          color:white;
+          font-size:150%;
+          &:hover {
+            background-color:white;
+            color:teal;
+          }
+        }
+      }
     }
   }
 }// home
